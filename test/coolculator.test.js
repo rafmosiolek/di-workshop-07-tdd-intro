@@ -34,8 +34,7 @@ describe.only('Coolculator', function() {
   })
   describe('multiplyArray', function() {
     it('should accept only arrays', function() {
-      result = mm.multiplyArray(1)
-      expect(result).to.equal('Passed value is not an array');
+      expect(() => mm.multiplyArray('not a array')).to.throw(TypeError);
     })
 
     it('should multiply all numbers in the array', function() {
