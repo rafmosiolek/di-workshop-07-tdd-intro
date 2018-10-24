@@ -1,7 +1,6 @@
 # Workshop: Building a Coolculator 🔢
 
-Collaborators: [your github username] & [your partners github username]
-
+Collaborators: rafmosiolek & goformarty
 Make sure you’re working in pairs - on a single laptop. You’ll be **pair programming**. Remember, in pair programming, there are two roles - **driver** and **navigator**.
 
 Start by forking this repo...

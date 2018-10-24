@@ -15,5 +15,11 @@ describe('Array', function() {
       array.push(1)
       expect(array.length).to.equal(5)
     })
+
+    it('should remove last item of the array', function() {
+      var array = [1, 2, 3, 4];
+      array.pop();
+      expect(array).to.deep.equal([1, 2, 3]);
+    })
   })
 })

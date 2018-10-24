@@ -3,7 +3,7 @@ var expect = chai.expect
 
 var Coolculator = require('../lib/coolculator')
 
-describe('Coolculator', function() {
+describe.only('Coolculator', function() {
   mm = new Coolculator()
 
   it('should add', function() {
@@ -12,14 +12,35 @@ describe('Coolculator', function() {
   })
 
   // Uncomment this 👇
-  // it('should multiply', function() {
-  //   result = mm.multiply(2, 3)
-  //   expect(result).to.equal(6)
-  // })
+  it('should multiply', function() {
+    result = mm.multiply(2, 3)
+    expect(result).to.equal(6)
+  })
 
   // Uncomment this 👇
-  // it('should subtract', function() {
-  //   result = mm.subtract(3, 2)
-  //   expect(result).to.equal(1)
-  // })
+  it('should subtract', function() {
+    result = mm.subtract(3, 2)
+    expect(result).to.equal(1)
+  })
+
+  it('should divide', function() {
+    result = mm.divide(4, 2)
+    expect(result).to.equal(2)
+  })
+
+  it('should factorial', function() {
+    result = mm.factorial(5)
+    expect(result).to.equal(120)
+  })
+  describe('multiplyArray', function() {
+    it('should accept only arrays', function() {
+      result = mm.multiplyArray(1)
+      expect(result).to.equal('Passed value is not an array');
+    })
+
+    it('should multiply all numbers in the array', function() {
+      result = mm.multiplyArray([1,2,3])
+      expect(result).to.equal(6)
+    })
+  })
 })
